@@ -1,6 +1,6 @@
 # English Remote Quiz — server kit (Netlify)
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=REPO_URL)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/alsedreda-boop/alhaytham-remote-quiz)
 
 A small public site that pairs with the offline English classroom platform:
 
@@ -29,9 +29,9 @@ RQ_TOOLS=<dir containing node_modules/@netlify/blobs> npm run test:function   # 
 
 ## Button for other pages
 Markdown:
-`[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=REPO_URL)`
+`[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/alsedreda-boop/alhaytham-remote-quiz)`
 
 HTML:
-`<a href="https://app.netlify.com/start/deploy?repository=REPO_URL"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify"></a>`
+`<a href="https://app.netlify.com/start/deploy?repository=https://github.com/alsedreda-boop/alhaytham-remote-quiz"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify"></a>`
 
-Replace `REPO_URL` with the public GitHub URL of this repo, e.g. `https://github.com/OWNER/english-remote-quiz`.
+Repo: https://github.com/alsedreda-boop/alhaytham-remote-quiz
