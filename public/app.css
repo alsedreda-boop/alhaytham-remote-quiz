@@ -1,0 +1,103 @@
+:root{--bg:#f3f6fa;--card:#fff;--ink:#14212e;--mut:#5d6b7a;--line:#d7dee7;--pri:#0f3d5e;--acc:#c9a24b;--ok:#15803d;--bad:#c2410c;--info:#1d4ed8;--neg:#c81e1e;--r:18px}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI",Tahoma,"Noto Sans Arabic","Noto Naskh Arabic",system-ui,sans-serif;-webkit-text-size-adjust:100%;overflow-x:hidden}
+button,input{font:inherit}
+.top{position:sticky;top:0;z-index:5;display:flex;align-items:center;justify-content:space-between;gap:.5rem;padding:.55rem .75rem;background:linear-gradient(90deg,#0f3d5e,#165b86);color:#fff;padding-top:max(.55rem,env(safe-area-inset-top))}
+.brand{display:flex;align-items:center;gap:.5rem;min-width:0}
+.logo{width:2.1rem;height:2.1rem;border-radius:10px;background:var(--acc);color:#0f3d5e;display:grid;place-items:center;font-weight:900;font-size:1.2rem;flex:none}
+.bt{display:flex;flex-direction:column;min-width:0}.bt b{font-size:1rem}.bt small{font-size:.68rem;opacity:.9;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tg{display:inline-flex;align-items:center;gap:.35rem;background:#229ED9;color:#fff;text-decoration:none;border-radius:99px;padding:.35rem .7rem;font-weight:800;font-size:.75rem;border:2px solid rgba(255,255,255,.5);flex:none}
+.tg svg{width:1.3rem;height:1.3rem}.tg svg circle{fill:#fff}.tg svg path{fill:#229ED9}
+@media (max-width:360px){.tg span{display:none}}
+main{max-width:640px;margin:0 auto;padding:.8rem .75rem 5.5rem}
+.card{background:var(--card);border-radius:var(--r);padding:1rem;box-shadow:0 2px 10px rgba(15,61,94,.08);margin-bottom:.8rem}
+.center{text-align:center}
+h1{font-size:1.35rem;margin:.2rem 0 .6rem}h2{font-size:1.1rem;margin:.2rem 0 .5rem}
+.mut{color:var(--mut);font-size:.9rem}
+.spin{width:2.4rem;height:2.4rem;border:4px solid var(--line);border-top-color:var(--pri);border-radius:50%;margin:1.5rem auto;animation:sp 1s linear infinite}@keyframes sp{to{transform:rotate(360deg)}}
+.code-in{display:block;width:100%;font-size:1.7rem;letter-spacing:.18em;text-align:center;direction:ltr;padding:.7rem;border:3px solid var(--line);border-radius:14px;margin:.8rem 0;text-transform:uppercase;font-family:ui-monospace,Menlo,Consolas,monospace;font-weight:800}
+.code-in:focus{outline:none;border-color:var(--pri)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.4rem;min-height:3.2rem;padding:.6rem 1.2rem;border-radius:14px;border:0;background:var(--pri);color:#fff;font-weight:900;font-size:1.1rem;cursor:pointer;width:100%;touch-action:manipulation}
+.btn.sec{background:#e6edf5;color:var(--pri)}.btn:disabled{opacity:.55}
+.btn+.btn{margin-top:.6rem}
+.err{background:#fde8e1;color:#7c2d12;border-radius:12px;padding:.6rem .8rem;margin:.6rem 0;font-weight:700}
+.info{background:#e8f1fb;color:#123d63;border-radius:12px;padding:.6rem .8rem;margin:.6rem 0}
+.hello{font-size:1.25rem;font-weight:900}.hello bdi{color:var(--pri)}
+.meta{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;margin:.8rem 0}.meta div{background:#f1f5f9;border-radius:12px;padding:.5rem;text-align:center;font-size:.85rem}.meta b{display:block;font-size:1.1rem}
+.les{display:flex;flex-wrap:wrap;gap:.3rem;justify-content:center;margin:.4rem 0}.les span{background:#eef2ff;color:#3730a3;border-radius:99px;padding:.15rem .6rem;font-size:.78rem;font-weight:700}
+/* شريط السؤال */
+.qbar{display:flex;align-items:center;gap:.6rem;margin-bottom:.6rem}
+.qbar .pg{flex:1;height:.7rem;background:#e2e8f0;border-radius:99px;overflow:hidden}.qbar .pg i{display:block;height:100%;background:linear-gradient(90deg,#0e8a5f,#22c55e);border-radius:99px;transition:width .3s}
+.qbar .no,.qbar .tm{font-weight:900;font-size:.95rem;white-space:nowrap}.tm.low{color:var(--bad)}
+.q-ctx{color:var(--mut);text-align:center;font-size:1rem;overflow-x:auto}
+.q-ctx svg,.q-prompt svg{max-width:100%;height:auto}
+.q-prompt{font-size:1.35rem;font-weight:900;text-align:center;line-height:1.85;padding:.4rem 0;overflow-wrap:anywhere}
+.q-prompt .lp{display:block;font-size:.85em;line-height:1.8}
+.choices{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin-top:.6rem}
+.choices.one{grid-template-columns:1fr}
+.choice{min-height:4.2rem;border-radius:16px;border:3px solid var(--line);background:#f8fafc;font-size:1.45rem;font-weight:900;padding:.5rem;color:var(--ink);cursor:pointer;touch-action:manipulation;line-height:1.6}
+.choices.small .choice,.choices.one .choice{font-size:1.05rem}
+.choice:active{transform:scale(.97)}
+.choice.ok{background:#dcfce7;border-color:var(--ok);color:#14532d}.choice.bad{background:#ffedd5;border-color:var(--bad);color:#7c2d12}
+.fb{min-height:2.2rem;text-align:center;font-weight:900;font-size:1.1rem;margin-top:.5rem}.fb.ok{color:var(--ok)}.fb.bad{color:var(--bad)}
+.mini{display:flex;justify-content:space-between;align-items:center;font-size:.85rem;color:var(--mut);margin-top:.4rem}
+/* لوحة الترتيب */
+.lb{list-style:none;margin:0;padding:0}
+.lb li{display:grid;grid-template-columns:2.2rem 1fr auto;gap:.5rem;align-items:center;padding:.55rem .4rem;border-bottom:1px solid #eef2f6}
+.lb li.me{background:#fff7e0;border-radius:12px;border-bottom-color:transparent}
+.lb .rk{width:2rem;height:2rem;border-radius:50%;display:grid;place-items:center;font-weight:900;background:#eef2f6;font-size:.9rem}
+.lb li:nth-child(1) .rk{background:#facc15}.lb li:nth-child(2) .rk{background:#cbd5e1}.lb li:nth-child(3) .rk{background:#f59e0b;color:#fff}
+.lb .nm{font-weight:800;font-size:.95rem;min-width:0}.lb .nm small{display:block;color:var(--mut);font-weight:600;font-size:.72rem}
+.lb .pb{height:.4rem;background:#e2e8f0;border-radius:99px;margin-top:.25rem;overflow:hidden}.lb .pb i{display:block;height:100%;background:#3b82f6}
+.lb .sc{font-weight:900;font-size:1.1rem;text-align:center;min-width:3rem}.lb .sc small{display:block;font-size:.65rem;color:var(--mut);font-weight:700}
+.big-score{font-size:3.2rem;font-weight:900;color:var(--pri);line-height:1.2}
+.mis{list-style:none;padding:0;margin:0}.mis li{background:#fff7ed;border-radius:12px;padding:.6rem .7rem;margin:.4rem 0;font-size:.92rem;line-height:1.8}.mis b{color:#9a3412}
+.brand-end{display:flex;flex-direction:column;align-items:center;gap:.4rem;text-align:center;font-size:.9rem}
+.brand-end .tg{font-size:.95rem;padding:.5rem 1rem}
+.tabs{position:fixed;bottom:0;inset-inline:0;display:flex;background:#fff;border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom);z-index:6}
+.tabs button{flex:1;border:0;background:none;padding:.7rem .3rem;font-weight:900;font-size:1rem;color:var(--mut)}
+.tabs button.on{color:var(--pri);box-shadow:inset 0 3px 0 var(--pri)}
+.row{display:flex;gap:.5rem}.row .btn{margin-top:0}
+.out{background:none;border:0;color:var(--mut);text-decoration:underline;font-size:.85rem;margin-top:.6rem;cursor:pointer}
+/* كتابة الرياضيات (كما في المختبرات) */
+.num{font-variant-numeric:tabular-nums;white-space:nowrap;unicode-bidi:isolate;font-weight:700}
+.ex{unicode-bidi:isolate;white-space:nowrap;display:inline-block}
+.opair{unicode-bidi:isolate;direction:rtl}.px{color:var(--info)}.py{color:var(--neg)}
+.var{font-weight:900;color:var(--info)}
+.ax sup{font-size:.62em;vertical-align:.85em;line-height:0;margin-inline:.04em}.ax .pw{white-space:nowrap}
+.frac{display:inline-flex;flex-direction:column;align-items:center;vertical-align:middle;margin:0 .2em;line-height:1.25}
+.frac>span:first-child{border-bottom:3px solid currentColor;padding:0 .25em}.frac>span:last-child{padding:0 .25em}
+.ftab{border-collapse:collapse;margin:.4rem auto;font-size:.85em}.ftab th,.ftab td{border:2px solid var(--line);padding:.2rem .5rem;text-align:center}.ftab th{background:#f1f5f9}
+.vchips span,.chip{display:inline-block;background:#eef2f6;border-radius:99px;padding:.1rem .5rem;margin:.1rem}
+.q-prompt img{max-width:100%}
+
+/* الفصل 3: بطاقات الجبر المصغّرة (لوحة المعادلة) */
+.mmat{display:inline-flex;align-items:stretch;gap:.35rem;vertical-align:middle;margin:.25rem;direction:rtl}.mmat>b{align-self:center;font-size:1.2em}
+.mside{display:inline-flex;flex-wrap:wrap;gap:.2rem;align-items:center;justify-content:center;border:3px solid #8a6d1f;border-radius:8px;padding:.25rem;min-width:3rem;min-height:2.6rem;max-width:11rem;background:#fffdf5}
+.mgrp{display:inline-flex;gap:.2rem;padding:.15rem;border:2px dashed #7c3aed;border-radius:18px}
+i.tx,i.tp,i.tm{font-style:normal;display:inline-grid;place-items:center;font-weight:900;border-radius:4px;font-size:.8em;line-height:1}
+i.tx{background:#2f9e44;color:#fff;width:1.3em;height:2.5em;border:2px solid #1b6e2e}
+i.tp{background:#f2c94c;color:#3a2a00;width:1.55em;height:1.55em;border:2px solid #b7791f}
+i.tm{background:#e03131;color:#fff;width:1.55em;height:1.55em;border:2px solid #9b1c1c;font-size:.72em}
+.q-prompt .lp.lg{display:inline-block;font-size:.6em;vertical-align:middle;margin-inline-start:.6rem}.lp.lg i{font-size:.75em}.lp.lg i.tx{height:1.8em;width:1.1em}.lp.lg i.tp,.lp.lg i.tm{width:1.4em;height:1.4em}
+/* الفصل 4: النسبة a : b (الحد الأول يمينًا)، الكسر بوحدات، العدد الكسري، النسبة المئوية */
+.rat{white-space:nowrap}.fu .frac>span{white-space:nowrap;font-size:.92em}.mixed .frac{font-size:.78em;margin-inline-start:.08em}.frac>span+span{border-top:none}.pct{white-space:nowrap;unicode-bidi:isolate}
+/* الدخول برقم السجل + الرقم السري */
+.fld{display:block;text-align:right;margin:.7rem 0;font-weight:800}
+.fld>span{display:block;margin-bottom:.3rem}
+.num-in{display:block;width:100%;font-size:1.6rem;letter-spacing:.12em;text-align:center;direction:ltr;padding:.65rem;min-height:3.4rem;border:3px solid var(--line);border-radius:14px;font-family:inherit;font-variant-numeric:tabular-nums}
+.pin-in{letter-spacing:.6em;font-size:1.9rem;max-width:13rem;margin:0 auto}
+.num-in:focus{outline:none;border-color:var(--pri)}
+.link{background:none;border:0;color:var(--info);font-weight:800;font-size:1rem;padding:.8rem .4rem;min-height:2.8rem;cursor:pointer;text-decoration:underline;font-family:inherit}
+#lf .btn,#cf .btn,#ff .btn{width:100%;margin-top:.4rem}
+.okm{background:#dcfce7;color:#14532d;border-radius:12px;padding:.7rem;margin:.6rem 0;font-weight:700;line-height:1.7}
+.qpick{display:grid;gap:.6rem}
+.qp{display:flex;flex-direction:column;align-items:flex-start;gap:.25rem;text-align:right;width:100%;min-height:4.4rem;padding:.8rem 1rem;border-radius:16px;border:3px solid var(--line);background:#f8fafc;color:var(--ink);font-family:inherit;font-size:1.05rem;cursor:pointer}
+.qp.st-open{border-color:var(--pri);background:#eef5fb}
+.qp.st-closed{opacity:.8}
+.qp .row2{display:flex;gap:.4rem;flex-wrap:wrap}
+
+/* English questions */
+.en{direction:ltr;unicode-bidi:isolate;font-family:'Segoe UI',Arial,sans-serif}
+.q-prompt .en{font-size:1.25em;font-weight:700}
+.choice .en,.ch .en{font-size:1.1em}

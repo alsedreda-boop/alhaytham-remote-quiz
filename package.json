@@ -1,0 +1,15 @@
+{
+  "name": "english-remote-quiz-kit",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Remote English quiz server (student page + one Netlify Function /api/* + Netlify Blobs). Zero runtime deps: server bundled in lib/rq-server.mjs.",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "dev": "node dev/server.mjs 8899",
+    "test": "node tests/core.test.mjs",
+    "test:function": "node tests/function.smoke.mjs"
+  }
+}

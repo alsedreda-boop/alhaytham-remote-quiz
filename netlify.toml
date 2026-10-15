@@ -1,0 +1,20 @@
+# موقع «مسابقة عن بعد» العام: صفحة الطالب + الدوال (Netlify Functions + Blobs)
+[build]
+  publish = "public"
+  functions = "netlify/functions"
+  command = ""
+  # no build step: public/ is prebuilt, the function bundle (lib/rq-server.mjs) has @netlify/blobs inlined
+
+[functions]
+  node_bundler = "esbuild"
+
+# لا فهرسة، لا إحالة، ولا تضمين في مواقع أخرى
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow, noarchive"
+    Referrer-Policy = "no-referrer"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    Content-Security-Policy = "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'"
